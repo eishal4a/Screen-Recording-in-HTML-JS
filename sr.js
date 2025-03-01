@@ -13,7 +13,7 @@ MediaRecorder.addEventListener('dataavailale',function(e)
 })
 MediaRecorder=addEventListener('stop',function(){
     let blob = new Blob(chunks,{
-        type chunks[0].type
+        type : chunks[0].type
     })
     let url = URL.createObjectURL(blob)
     let video=document.querySelector("Video")
@@ -23,3 +23,4 @@ MediaRecorder=addEventListener('stop',function(){
     a.download='video.webm'
     a.click()
 })
+MediaRecorder.start()
